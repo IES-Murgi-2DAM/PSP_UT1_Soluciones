@@ -1,0 +1,22 @@
+### Idea ###
+.idea/
+
+### Entornos virtuales ###
+.venv/
+venv/
+
+### Python generado ###
+__pycache__/
+*.py[cod]
+
+### Configuración local y secretos ###
+.env
+!.env.example
+
+### Cachés de herramientas ###
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+### Logs ###
+*.log
