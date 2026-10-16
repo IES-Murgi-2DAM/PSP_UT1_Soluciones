@@ -15,7 +15,7 @@ class CuentaBancaria:
             self.saldo -= cantidad
             print(f"Retirado: {cantidad}. Nuevo saldo: {self.saldo}")
         else:
-            raise SaldoInsuficienteError(f"Saldo insuficiente: tienes ${self.saldo} €, intentas retirar ${cantidad} €")
+            print("La cantidad a retirar debe ser positiva")
 
     def __str__(self) -> str:
         return f"Titular: {self.titular} - Saldo: {self.saldo} €"
@@ -24,9 +24,6 @@ class CuentaBancaria:
         if not isinstance(value, CuentaBancaria):
             return False
         return self.titular == value.titular and self.saldo == value.saldo
-
-class SaldoInsuficienteError(Exception):
-    pass
 
 if __name__ == "__main__":
     cuenta1 = CuentaBancaria("Juan", 1000)
